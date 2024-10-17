@@ -11,6 +11,12 @@ class ReglaValidacion:
     def es_valida(self, clave: str) -> bool:
         pass
 
+    @staticmethod
+    def _contiene_mayuscula(clave: str) -> bool:
+        for caracter in clave:
+            if caracter.isupper():
+                return True
+        return False
 
 class Validador:
     def __init__(self, regla: ReglaValidacion):
