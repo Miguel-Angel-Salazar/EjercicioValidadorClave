@@ -18,6 +18,13 @@ class ReglaValidacion:
                 return True
         return False
 
+    @staticmethod
+    def _contiene_minuscula(clave: str) -> bool:
+        for caracter in clave:
+            if caracter.islower():
+                return True
+        return False
+
 class Validador:
     def __init__(self, regla: ReglaValidacion):
         self.regla = regla
